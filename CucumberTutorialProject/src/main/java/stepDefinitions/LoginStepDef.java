@@ -1,9 +1,12 @@
 package stepDefinitions;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -49,6 +52,13 @@ public class LoginStepDef {
 		driver.quit();
 	    Assert.assertEquals("CRM", title);
 	 
+	}
+	
+	@Then("^Users enters username and password list$")
+	public void users_enters_username_and_password_list(DataTable data) {
+		List<List<String>> dataValue= data.raw();
+		driver.findElement(By.name("email")).sendKeys(dataValue.get(0).get(0));
+		driver.findElement(By.name("password")).sendKeys(dataValue.get(0).get(1));
 	}
 
 }
