@@ -30,10 +30,10 @@ public class LoginStepDef {
 	   
 	}
 
-	@Then("^User enters username and password$")
-	public void user_enters_username_and_password() throws Throwable {
-		driver.findElement(By.name("email")).sendKeys("avirocks701@gmail.com");
-		driver.findElement(By.name("password")).sendKeys("Crm@1234");
+	@Then("^Users enters \"(.*)\" and \"(.*)\"$")
+	public void user_enters_username_and_password(String Username,String Password) throws Throwable {
+		driver.findElement(By.name("email")).sendKeys(Username);
+		driver.findElement(By.name("password")).sendKeys(Password);
 	    
 	}
 

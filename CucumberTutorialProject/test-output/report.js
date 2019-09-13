@@ -26,7 +26,7 @@ formatter.step({
 });
 formatter.step({
   "line": 7,
-  "name": "User enters username and password",
+  "name": "Users enters \"avirocks701@gmail.com\" and \"Crm@1234\"",
   "keyword": "Then "
 });
 formatter.step({
@@ -43,44 +43,54 @@ formatter.match({
   "location": "LoginStepDef.user_already_available_on_CRM_Home_Page()"
 });
 formatter.result({
-  "duration": 13599363839,
+  "duration": 14993364893,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDef.title_of_page_is_verified()"
 });
 formatter.result({
-  "duration": 20733911,
+  "duration": 19146708,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginStepDef.user_enters_username_and_password()"
+  "arguments": [
+    {
+      "val": "avirocks701@gmail.com",
+      "offset": 14
+    },
+    {
+      "val": "Crm@1234",
+      "offset": 42
+    }
+  ],
+  "location": "LoginStepDef.user_enters_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 586456291,
+  "duration": 608337085,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDef.user_clicks_on_login_button()"
 });
 formatter.result({
-  "duration": 109460287,
+  "duration": 111904665,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDef.user_is_on_home_page()"
 });
 formatter.result({
-  "duration": 794401695,
+  "duration": 844418654,
   "status": "passed"
 });
-formatter.scenario({
+formatter.scenarioOutline({
   "line": 11,
   "name": "Create New Contact",
   "description": "",
   "id": "login;create-new-contact",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
 });
 formatter.step({
   "line": 13,
@@ -99,7 +109,77 @@ formatter.step({
 });
 formatter.step({
   "line": 16,
-  "name": "User enters firstName and LastName",
+  "name": "User enters \"\u003cFirstName\u003e\" and \"\u003cLastName\u003e\" and title",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 17,
+  "name": "User Clicks on save button",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 19,
+  "name": "",
+  "description": "",
+  "id": "login;create-new-contact;",
+  "rows": [
+    {
+      "cells": [
+        "FirstName",
+        "LastName"
+      ],
+      "line": 20,
+      "id": "login;create-new-contact;;1"
+    },
+    {
+      "cells": [
+        "Cont3",
+        "Cont3"
+      ],
+      "line": 21,
+      "id": "login;create-new-contact;;2"
+    },
+    {
+      "cells": [
+        "Cont4",
+        "Cont4"
+      ],
+      "line": 22,
+      "id": "login;create-new-contact;;3"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.scenario({
+  "line": 21,
+  "name": "Create New Contact",
+  "description": "",
+  "id": "login;create-new-contact;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 13,
+  "name": "User is navigated to home page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 14,
+  "name": "User navigates on contact screen",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
+  "name": "User clicks on New button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "User enters \"Cont3\" and \"Cont3\" and title",
+  "matchedColumns": [
+    0,
+    1
+  ],
   "keyword": "Then "
 });
 formatter.step({
@@ -111,35 +191,127 @@ formatter.match({
   "location": "NewContactStepDef.user_is_navigated_to_home_page()"
 });
 formatter.result({
-  "duration": 13641114114,
+  "duration": 11403475634,
   "status": "passed"
 });
 formatter.match({
   "location": "NewContactStepDef.user_navigates_on_contact_screen()"
 });
 formatter.result({
-  "duration": 2665478966,
+  "duration": 1910893036,
   "status": "passed"
 });
 formatter.match({
   "location": "NewContactStepDef.user_clicks_on_New_button()"
 });
 formatter.result({
-  "duration": 410278422,
+  "duration": 1219997056,
   "status": "passed"
 });
 formatter.match({
-  "location": "NewContactStepDef.user_enters_firstName_and_LastName()"
+  "arguments": [
+    {
+      "val": "Cont3",
+      "offset": 13
+    },
+    {
+      "val": "Cont3",
+      "offset": 25
+    }
+  ],
+  "location": "NewContactStepDef.user_enters_firstName_and_LastName(String,String)"
 });
 formatter.result({
-  "duration": 1677531046,
+  "duration": 2222478555,
   "status": "passed"
 });
 formatter.match({
   "location": "NewContactStepDef.user_Clicks_on_save_button()"
 });
 formatter.result({
-  "duration": 340637313,
+  "duration": 382105989,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 22,
+  "name": "Create New Contact",
+  "description": "",
+  "id": "login;create-new-contact;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 13,
+  "name": "User is navigated to home page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 14,
+  "name": "User navigates on contact screen",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
+  "name": "User clicks on New button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "User enters \"Cont4\" and \"Cont4\" and title",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 17,
+  "name": "User Clicks on save button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "NewContactStepDef.user_is_navigated_to_home_page()"
+});
+formatter.result({
+  "duration": 16679132329,
+  "status": "passed"
+});
+formatter.match({
+  "location": "NewContactStepDef.user_navigates_on_contact_screen()"
+});
+formatter.result({
+  "duration": 2815431713,
+  "status": "passed"
+});
+formatter.match({
+  "location": "NewContactStepDef.user_clicks_on_New_button()"
+});
+formatter.result({
+  "duration": 414754591,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Cont4",
+      "offset": 13
+    },
+    {
+      "val": "Cont4",
+      "offset": 25
+    }
+  ],
+  "location": "NewContactStepDef.user_enters_firstName_and_LastName(String,String)"
+});
+formatter.result({
+  "duration": 1498506876,
+  "status": "passed"
+});
+formatter.match({
+  "location": "NewContactStepDef.user_Clicks_on_save_button()"
+});
+formatter.result({
+  "duration": 305982519,
   "status": "passed"
 });
 });

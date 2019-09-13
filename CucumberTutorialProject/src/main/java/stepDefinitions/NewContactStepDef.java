@@ -40,10 +40,10 @@ public class NewContactStepDef {
 	    
 	}
 
-	@Then("^User enters firstName and LastName$")
-	public void user_enters_firstName_and_LastName() throws Throwable {
-	    driver.findElement(By.name("first_name")).sendKeys("Fname");
-	    driver.findElement(By.name("last_name")).sendKeys("LName");
+	@Then("^User enters \"(.*)\" and \"(.*)\" and title$")
+	public void user_enters_firstName_and_LastName(String Fname,String Lname) throws Throwable {
+	    driver.findElement(By.name("first_name")).sendKeys(Fname);
+	    driver.findElement(By.name("last_name")).sendKeys(Lname);
 	    
 	}
 
@@ -52,6 +52,7 @@ public class NewContactStepDef {
 	  user_Clicks_on_save_button() throws Throwable { driver.findElement(By.xpath(
 	  "//*[@id=\"dashboard-toolbar\"]/div[2]/div/button[2]")).click();
 	  driver.findElement(By.xpath("//*[@id=\"main-nav\"]/a[3]/span")).click();
+	  driver.quit();
 	  
 	  }
 	 
