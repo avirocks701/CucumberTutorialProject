@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="55.42993">
+<testcase classname="Login" name="Login to CRM" time="16.577172">
+<system-out><![CDATA[Given User already available on CRM Home Page...............................passed
+When Title of page is verified..............................................passed
+Then Users enters "avirocks701@gmail.com" and "Crm@1234"....................passed
+Then User clicks on login button............................................passed
+Then User is on home page...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Create New Contact" time="17.13895">
+<system-out><![CDATA[Given User is navigated to home page........................................passed
+When User navigates on contact screen.......................................passed
+Then User clicks on New button..............................................passed
+Then User enters "Cont3" and "Cont3" and title..............................passed
+Then User Clicks on save button.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Create New Contact 2" time="21.713808">
+<system-out><![CDATA[Given User is navigated to home page........................................passed
+When User navigates on contact screen.......................................passed
+Then User clicks on New button..............................................passed
+Then User enters "Cont4" and "Cont4" and title..............................passed
+Then User Clicks on save button.............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
