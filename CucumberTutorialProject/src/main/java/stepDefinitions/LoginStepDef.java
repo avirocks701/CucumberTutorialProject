@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -60,5 +61,7 @@ public class LoginStepDef {
 		driver.findElement(By.name("email")).sendKeys(dataValue.get(0).get(0));
 		driver.findElement(By.name("password")).sendKeys(dataValue.get(0).get(1));
 	}
+	
+
 
 }
