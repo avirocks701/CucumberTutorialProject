@@ -47,12 +47,14 @@ public class NewContactStepDef {
 	    
 	}
 
-	@Then("^User Clicks on save button$")
-	public void user_Clicks_on_save_button() throws Throwable {
-	   driver.findElement(By.xpath("//*[@id=\"dashboard-toolbar\"]/div[2]/div/button[2]")).click();
-	   driver.findElement(By.xpath("//*[@id=\"main-nav\"]/a[3]/span")).click();
-	   
-	}
+	
+	  @Then("^User Clicks on save button$") public void
+	  user_Clicks_on_save_button() throws Throwable { driver.findElement(By.xpath(
+	  "//*[@id=\"dashboard-toolbar\"]/div[2]/div/button[2]")).click();
+	  driver.findElement(By.xpath("//*[@id=\"main-nav\"]/a[3]/span")).click();
+	  
+	  }
+	 
 
 
 }
