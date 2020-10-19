@@ -20,7 +20,6 @@ public class AppTest
     public AppTest( String testName ) throws Throwable
     {
         super( testName );
-        System.out.println("Test Run success------Avinash");
         String [] argv = new String[]{ "-g","",".\\src\\main\\java\\features\\login.feature"};
         ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
         byte exitstatus = Main.run(argv, contextClassLoader);
