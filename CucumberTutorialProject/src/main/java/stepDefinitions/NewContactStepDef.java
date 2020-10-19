@@ -36,7 +36,8 @@ public class NewContactStepDef {
 
 	@Then("^User clicks on New button$")
 	public void user_clicks_on_New_button() throws Throwable {
-	    driver.findElement(By.linkText("New")).click();
+		Thread.sleep(9000);
+	    driver.findElement(By.xpath("//button[@class='ui linkedin button' and contains(text(),'New')]")).click();
 	    
 	}
 

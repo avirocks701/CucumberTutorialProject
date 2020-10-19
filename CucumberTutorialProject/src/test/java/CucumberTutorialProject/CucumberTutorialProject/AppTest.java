@@ -1,5 +1,6 @@
 package CucumberTutorialProject.CucumberTutorialProject;
 
+import cucumber.api.cli.Main;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -14,10 +15,16 @@ public class AppTest
      * Create the test case
      *
      * @param testName name of the test case
+     * @throws Throwable 
      */
-    public AppTest( String testName )
+    public AppTest( String testName ) throws Throwable
     {
         super( testName );
+        System.out.println("Test Run success------Avinash");
+        String [] argv = new String[]{ "-g","",".\\src\\main\\java\\features\\login.feature"};
+        ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
+        byte exitstatus = Main.run(argv, contextClassLoader);
+
     }
 
     /**

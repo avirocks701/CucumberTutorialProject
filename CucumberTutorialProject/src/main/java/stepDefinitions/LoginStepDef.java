@@ -30,7 +30,7 @@ public class LoginStepDef {
 	@When("^Title of page is verified$")
 	public void title_of_page_is_verified() throws Throwable {
 	   String title=driver.getTitle();
-	   Assert.assertEquals("CRM", title);
+	   Assert.assertEquals("Cogmento CRM", title);
 	   
 	}
 
@@ -51,7 +51,7 @@ public class LoginStepDef {
 	public void user_is_on_home_page() throws Throwable {
 		String title=driver.getTitle();
 		driver.quit();
-	    Assert.assertEquals("CRM", title);
+	    Assert.assertEquals("Cogmento CRM", title);
 	 
 	}
 	
